@@ -8,7 +8,7 @@ import {firstValueFrom} from "rxjs";
 })
 export class UserService {
 
-  private isLoggedIn: boolean = false;
+  private isLoggedIn: boolean = true;
   private user = {
     user_id: "",
     token: ""

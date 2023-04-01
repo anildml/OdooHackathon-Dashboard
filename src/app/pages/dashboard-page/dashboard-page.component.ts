@@ -11,7 +11,20 @@ import {RoomService} from "../../services/room-service/room.service";
 })
 export class DashboardPageComponent implements OnInit {
 
-  private doesUserHaveQuestions: boolean = false;
+  doesUserHaveQuestions: boolean = false;
+  questionList: string[] = [
+    "How do you feel?",
+    "How do you feel?",
+    "Question 3",
+    "Question 4"
+  ];
+  questionIndex = 0;
+  questionsFinished: boolean = false;
+
+  replyList: string[] = [];
+
+  answer: string;
+  answerButtonTitle: string = "Answer";
 
   constructor(
     private userService: UserService,
@@ -30,8 +43,21 @@ export class DashboardPageComponent implements OnInit {
       this.router.navigate(["room"]);
     }
 
-    this.doesUserHaveQuestions = this.planService.doesUserHaveQuestionsToAnswer();
+    this.doesUserHaveQuestions = !this.planService.doesUserHaveQuestionsToAnswer();
 
+  }
+
+  public goToNextQuestion() {
+    this.replyList.push(this.answer);
+    this.answer = "";
+    this.questionIndex++;
+    if (this.questionIndex == this.questionList.length - 1) {
+      this.answerButtonTitle = "Finish";
+    }
+    if (this.questionIndex == this.questionList.length) {
+      this.questionsFinished = true;
+      this.doesUserHaveQuestions = false;
+    }
   }
 
 }
