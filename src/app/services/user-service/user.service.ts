@@ -6,8 +6,13 @@ import {firstValueFrom} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class UserServiceService {
+export class UserService {
 
+  private isLoggedId(): boolean {
+    return this.isLoggedIn;
+  }
+
+  private isLoggedIn: boolean = false;
   private user = {
     user_id: "",
     token: ""
@@ -29,7 +34,8 @@ export class UserServiceService {
     }
 
     const loginRequest: LoginRequest = {
-
+      username: username,
+      password: password
     }
 
     const body = {
