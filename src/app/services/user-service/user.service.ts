@@ -8,10 +8,6 @@ import {firstValueFrom} from "rxjs";
 })
 export class UserService {
 
-  private isLoggedId(): boolean {
-    return this.isLoggedIn;
-  }
-
   private isLoggedIn: boolean = false;
   private user = {
     user_id: "",
@@ -48,6 +44,10 @@ export class UserService {
 
   public getUserAuthToken(): string {
     return this.user.token;
+  }
+
+  public isLoggedId(): boolean {
+    return this.isLoggedIn;
   }
 
 }
