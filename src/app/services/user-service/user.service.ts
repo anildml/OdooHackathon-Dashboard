@@ -9,10 +9,10 @@ import {environment} from "../../../environments/environment";
 })
 export class UserService {
 
-  loggedIn: boolean = false;
+  loggedIn: boolean = true;
   user = {
-    user_id: "2",
-    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODAzODA2MDIsImV4cCI6MTY4MDM5NTYwMiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjMifQ.jUKO5UpWCbd0f6wUc9B4OkJR3VCfVM3E7NYgZy45hqDb-eZVaUeTQ16_7m8AvFV8tQdjHp7SPn15aV-SIl7iElWRUmI_atLrhaeZNLAo82Qiv-tYVfe4XznP8OEIPBBLTf4eVc2124ha7kTlD2b0a7XuzSdGSeEOIASunE5eJE1o_CumpxmfBt-5ro65eUSssufwfkHw0rlR-OEX1RacxXu95sEVeB9rh5i6n_m3v_1XYkrlaw1OErpL2Fs9gpV6WirbVM5FWEA0z8obDhC1XGHs3chZnP-uVxgrruQ8tmf0ES5pym1FqwolgDvnQR10vf2iH5Ih6LIi-6yL24lZfw"
+    user_id: "3",
+    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODAzODE3NTEsImV4cCI6MTY4MDM5Njc1MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjMifQ.cJrszA6Mrdb5wqw4IcYOLBFw4AicA9Eo2E2qi8CMkJTmfvbtrazoShvv0n8gGEsZfezdcMHwq3c1oeR1bh2uW2rNN__RgFnltOQ2v1Z5WYGdX7ZrPV4W3EmOX1H6dIN86nS3LbEdEyC0aNho2TqU0JAAjrOenlZozxmwCeXJztD9mHvA8GQDTdFXZNygWIaYquemeH01XwoKvHIEDIg5PeOQebKnCcWwPzhd6bpuFP2GKlymTCxhQ7JRzL-5znEXT-3a6ZYtQIlFCqeZcP9Aoaf8nrPWqPe-h_CNSOAyXjLv3qyTaaaOW2oUan8CZ1o1sfrsjMiT5E0Hzccblwnv1A"
   }
   constructor(
     private http: HttpClient
