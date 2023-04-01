@@ -5,10 +5,10 @@ import {DashboardPageComponent} from "./pages/dashboard-page/dashboard-page.comp
 import {RoomPageComponent} from "./pages/room-page/room-page.component";
 
 const routes: Routes = [
-  { path: '**', component: DashboardPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'dashboard', component: DashboardPageComponent },
-  { path: 'room', component: RoomPageComponent }
+  { path: 'room', component: RoomPageComponent },
+  { path: '**', component: DashboardPageComponent }
 ];
 
 @NgModule({
