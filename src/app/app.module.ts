@@ -7,11 +7,11 @@ import { LoginComponent } from './components/login/login.component';
 import { QuestionComponent } from './components/question/question.component';
 import { RoomComponent } from './components/room/room.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { QuestionsPageComponent } from './pages/questions-page/questions-page.component';
 import { RoomPageComponent } from './pages/room-page/room-page.component';
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {UserAuthHeaderInterceptor} from "./configs/auth-config/user-auth-header.interceptor";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     QuestionComponent,
     RoomComponent,
     LoginPageComponent,
-    QuestionsPageComponent,
-    RoomPageComponent
+    RoomPageComponent,
+    DashboardPageComponent
   ],
   imports: [
     BrowserModule,
