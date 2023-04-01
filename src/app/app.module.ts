@@ -11,6 +11,7 @@ import { QuestionsPageComponent } from './pages/questions-page/questions-page.co
 import { RoomPageComponent } from './pages/room-page/room-page.component';
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {UserAuthHeaderInterceptor} from "./configs/auth-config/user-auth-header.interceptor";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {UserAuthHeaderInterceptor} from "./configs/auth-config/user-auth-header.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
