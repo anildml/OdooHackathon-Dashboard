@@ -6,9 +6,9 @@ import {RoomResponse} from "../../models/room-response";
 })
 export class RoomService {
 
-  private userHaveARoom: boolean = true;
-  private roomName: string;
-  private roomResponse: RoomResponse;
+  userHaveARoom: boolean = true;
+  roomName: string;
+  roomResponse: RoomResponse;
 
   constructor() { }
 

@@ -7,8 +7,8 @@ import {PlanResponse} from "../../models/plan-response";
 })
 export class PlanService {
 
-  private userHaveQuestionsToAnswer: boolean = true;
-  private planResponse: PlanResponse;
+  userHaveQuestionsToAnswer: boolean = true;
+  planResponse: PlanResponse;
 
   constructor(
     private http: HttpClient
