@@ -12,7 +12,7 @@ export class RoomService {
 
   constructor() { }
 
-  private doesUserHaveARoom(): boolean {
+  public doesUserHaveARoom(): boolean {
     return this.userHaveARoom;
   }
 
