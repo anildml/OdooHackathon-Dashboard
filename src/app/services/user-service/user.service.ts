@@ -9,10 +9,10 @@ import {environment} from "../../../environments/environment";
 })
 export class UserService {
 
-  loggedIn: boolean = true;
+  loggedIn: boolean = false;
   user = {
-    user_id: "3",
-    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODAzODE3NTEsImV4cCI6MTY4MDM5Njc1MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlcjMifQ.cJrszA6Mrdb5wqw4IcYOLBFw4AicA9Eo2E2qi8CMkJTmfvbtrazoShvv0n8gGEsZfezdcMHwq3c1oeR1bh2uW2rNN__RgFnltOQ2v1Z5WYGdX7ZrPV4W3EmOX1H6dIN86nS3LbEdEyC0aNho2TqU0JAAjrOenlZozxmwCeXJztD9mHvA8GQDTdFXZNygWIaYquemeH01XwoKvHIEDIg5PeOQebKnCcWwPzhd6bpuFP2GKlymTCxhQ7JRzL-5znEXT-3a6ZYtQIlFCqeZcP9Aoaf8nrPWqPe-h_CNSOAyXjLv3qyTaaaOW2oUan8CZ1o1sfrsjMiT5E0Hzccblwnv1A"
+    user_id: "",
+    token: ""
   }
   constructor(
     private http: HttpClient
