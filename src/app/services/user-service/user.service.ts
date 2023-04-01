@@ -22,23 +22,12 @@ export class UserService {
     password: string
   ) {
 
-    const headers = new HttpHeaders({
-      "token": ""
-    });
-    const options = {
-      headers: headers
-    }
-
     const loginRequest: LoginRequest = {
       username: username,
       password: password
     }
 
-    const body = {
-
-    };
-
-    let a = await firstValueFrom(this.http.post("url", body));
+    let a = await firstValueFrom(this.http.post("url", loginRequest));
 
   }
 
