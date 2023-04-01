@@ -20,7 +20,7 @@ export class RoomPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if (!this.userService.isLoggedId()) {
+    if (!this.userService.isLoggedIn()) {
       this.router.navigate(["login"]);
     }
 

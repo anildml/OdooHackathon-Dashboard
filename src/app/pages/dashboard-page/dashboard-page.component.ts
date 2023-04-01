@@ -33,9 +33,9 @@ export class DashboardPageComponent implements OnInit {
     private roomService: RoomService
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
 
-    if (!this.userService.isLoggedId()) {
+    if (!this.userService.isLoggedIn()) {
       this.router.navigate(["login"]);
     }
 
