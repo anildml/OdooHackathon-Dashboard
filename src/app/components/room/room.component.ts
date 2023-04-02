@@ -10,10 +10,8 @@ import {PlanService} from "../../services/plan-service/plan.service";
 export class RoomComponent implements OnInit {
 
   roomName: string;
-  question: string;
-  replies: any[];
-  repliesGrouped: any = {};
-  monthCount = 1;
+  questionsGrouped: any = {};
+  questionCount = 1;
 
   constructor(
     private roomService: RoomService,
@@ -25,23 +23,36 @@ export class RoomComponent implements OnInit {
     let data = await this.roomService.getRoomData();
 
     this.roomName = data.name;
-    let question = data.plan.question[0];
-    this.question = question.description;
 
-    this.replies = question.replies;
-
-    for (let reply of this.replies) {
-      if (!this.repliesGrouped[reply.monthCount]) {
-        this.repliesGrouped[reply.monthCount] = [];
+    for (let question of data.plan.question) {
+      if (!this.questionsGrouped[question.id]) {
+        this.questionsGrouped[question.id] = [];
       }
-      this.repliesGrouped[reply.monthCount].push(reply);
+      this.questionsGrouped[question.id].push(question);
     }
-
 
   }
 
   public goToNextQuestion(): void {
-    this.monthCount++;
+    this.questionCount++;
+  }
+
+  public goToPreviousQuestion(): void {
+    this.questionCount--;
+  }
+
+  public getCurrentQuestion(): string {
+    if (this.questionsGrouped[this.questionCount] != undefined) {
+      return this.questionsGrouped[this.questionCount][0].description;
+    }
+    return "";
+  }
+
+  public getReplyList(): any[] {
+    if (this.questionsGrouped[this.questionCount] != undefined) {
+      return this.questionsGrouped[this.questionCount][0].replies;
+    }
+    return [];
   }
 
 }
