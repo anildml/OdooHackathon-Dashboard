@@ -1,14 +1,15 @@
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <div class="whole_page">
 <div class="center_pannel">
-<p id="message">Welcome</p>
+  <div class="d-flex justify-content-center mt-5 row">
+    <img src="https://image.noelshack.com/fichiers/2023/13/7/1680427339-sante-mentale.png" alt="medical" style="width: 15%" class="me-4">
+    <h1 class="text-center mt-3 me-auto" style="font-size: 2rem">MindCure dashboard</h1>
+  </div>
 <div class="username_div">
-<p id="username">username</p>
-<textarea placeholder="username" #UsernameText rows="1" id="textarea_username"></textarea>
+<textarea placeholder="Username" #UsernameText rows="1" id="textarea_username"></textarea>
 </div>
 <div class="password_div">
-<p id="password">Password</p>
-<textarea placeholder="password" #PasswordText rows="1" id="textarea_password"></textarea>
+<textarea placeholder="Password" #PasswordText rows="1" id="textarea_password"></textarea>
 </div>
 <div *ngIf="check_if_false" class="alert">
     Mauvais mot de passe, veuillez réessayer.
@@ -16,4 +17,4 @@
 <button class="send_button"(click)="sendConnectionInfo(UsernameText.value,PasswordText.value)">Send</button>
 </div>
 
-</div> 
+</div>

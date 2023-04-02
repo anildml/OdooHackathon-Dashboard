@@ -37,13 +37,10 @@
     position: relative;
     width: 90%;
     left: 5%;
-    top: 25%;  
-    /* border-radius: 50% 10% 50% 20%;  */
+    top: 10%;
 }
 .password_div{
-
-    top:30%;
-    /* border-radius: 50% 10% 50% 20%;  */
+    top:20%;
 }
 
 #textarea_username,#textarea_password{
@@ -78,19 +75,17 @@
 
  #textarea_username::placeholder {
     font-size:20px;
-  } 
+  }
 .send_button{
     border-radius: 50px;
     position: absolute;
-    bottom :20%;
+    bottom :40%;
     left:10%;
-    font-family: 'lato';
     background-color: #7c3421;
     color: white;
     font-size: 20px;
     text-align: center;
     width: 80%;
-    height: 60px;
     line-height: 60px;
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;
@@ -109,5 +104,4 @@
 }
 
 
-  
-  
+

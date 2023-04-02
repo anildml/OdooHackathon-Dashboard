@@ -1,5 +1,9 @@
 <div class="container">
-  <h2 class="text-center mt-3" style="font-size: 3rem">Room {{roomName}}</h2>
+  <div class="d-flex mt-4 align-items-center justify-content-between mb-3">
+    <img src="https://image.noelshack.com/fichiers/2023/13/7/1680427339-sante-mentale.png" alt="medical" style="width: 7%" class="me-4">
+    <h1 class="text-center mt-3 me-auto" style="font-size: 2rem">MindCure dashboard</h1>
+    <h2 class="text-center mt-3" style="font-size: 1.5rem">Room {{roomName}}</h2>
+  </div>
   <hr>
   <div *ngIf="questionCount < 6">
     <div class="d-flex justify-content-between">
@@ -13,8 +17,7 @@
             <!-- foreach user of this room -->
             <div class="d-flex mt-5 " *ngFor="let reply of getReplyList(); let i = index">
               <div class="d-flex flex-column ms-0">
-                <img *ngIf="i < 5" style="height: 100px;" [src]="profileImages[i]" alt="test" class="rounded-circle object-fit-fill">
-                <img *ngIf="i >= 5" style="height: 100px;" [src]="'https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80'" alt="test" class="rounded-circle object-fit-fill"><span class="mt-3 d-flex justify-content-center">{{reply.person.username}}</span>
+                <img *ngIf="i < 5" style="height: 100px;" [src]="profileImages[i]" alt="test" class="rounded-circle object-fit-cover">
               </div>
               <p class="ms-5 mb-4 d-flex align-items-center">{{reply.description}}</p>
             </div>
@@ -37,11 +40,13 @@
       </div>
     </div>
   </div>
-  <div *ngIf="questionCount >= 6">
-    <h1>
-      Session is finished
-      <i class="em em-smiley" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH"></i>
-    </h1>
-
+  <div class="card" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; border: none">
+    <div class="d-flex justify-content-center align-items-center my-5 row" *ngIf="questionCount >= 6">
+      <img src="https://image.noelshack.com/fichiers/2023/13/7/1680427729-checked.png" alt="check" style="width: 10%">
+      <h1 class="text-center mt-3">
+        Session is finished <i class="em em-smiley" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH"></i>
+      </h1>
+    </div>
   </div>
+
 </div>

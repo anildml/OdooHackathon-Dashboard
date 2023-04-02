@@ -18,7 +18,7 @@ export class RoomService {
   ) { }
 
   public doesUserHaveARoom(): boolean {
-    return this.userHaveARoom;
+    return !this.userHaveARoom;
   }
 
   public async getRoomData(): Promise<any> {

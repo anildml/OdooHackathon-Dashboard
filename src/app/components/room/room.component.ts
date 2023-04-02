@@ -17,8 +17,8 @@ export class RoomComponent implements OnInit {
     "https://xsgames.co/randomusers/assets/avatars/male/46.jpg",
     "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
     "https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg",
-    "https://preview.redd.it/profile-picture-of-the-random-old-guy-who-likes-your-photo-v0-5560va6tsg191.jpg?auto=webp&s=e9d18181cd0aebb733360843c9251c9853a132a8",
-    "https://blog.texasbar.com/files/2014/05/NickLaurent1.gif"
+    "https://xsgames.co/randomusers/assets/avatars/male/8.jpg",
+    "https://pyxis.nymag.com/v1/imgs/74e/daf/1293f7c0ebc1dda4f28d2ed0db8cb746a8-10-tiffanytrump.rsquare.w700.jpg"
   ];
 
   constructor(
