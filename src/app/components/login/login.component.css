@@ -7,7 +7,7 @@
 .center_pannel{
     background-color: white;
     width:33%;
-    height: 90%;
+    height: 50%;
     position: absolute;
     top:8%;
     left:33%;
@@ -79,7 +79,7 @@
 .send_button{
     border-radius: 50px;
     position: absolute;
-    bottom :40%;
+    bottom :10%;
     left:10%;
     background-color: #7c3421;
     color: white;
