@@ -3,6 +3,7 @@ import {UserService} from "../../services/user-service/user.service";
 import {Router} from "@angular/router";
 import {PlanService} from "../../services/plan-service/plan.service";
 import {RoomService} from "../../services/room-service/room.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-dashboard-page',
@@ -12,12 +13,8 @@ import {RoomService} from "../../services/room-service/room.service";
 export class DashboardPageComponent implements OnInit {
 
   doesUserHaveQuestions: boolean = false;
-  questionList: string[] = [
-    "How do you feel?",
-    "How do you feel?",
-    "Question 3",
-    "Question 4"
-  ];
+
+  questionList: any[] = [];
   questionIndex = 0;
   questionsFinished: boolean = false;
 
@@ -27,6 +24,7 @@ export class DashboardPageComponent implements OnInit {
   answerButtonTitle: string = "Answer";
 
   constructor(
+    private http: HttpClient,
     private userService: UserService,
     private router: Router,
     private planService: PlanService,
@@ -34,6 +32,8 @@ export class DashboardPageComponent implements OnInit {
   ) { }
 
   async ngOnInit(): Promise<void> {
+
+    // await this.userService.login("user3", "password");
 
     if (!this.userService.isLoggedIn()) {
       this.router.navigate(["login"]);
@@ -43,12 +43,15 @@ export class DashboardPageComponent implements OnInit {
       this.router.navigate(["room"]);
     }
 
-    this.doesUserHaveQuestions = !this.planService.doesUserHaveQuestionsToAnswer();
+    let a = await this.planService.getQuestionList();
+    this.doesUserHaveQuestions = !a[0].hasReplied;
+    this.questionList = a[0].plan.question;
+
 
   }
 
-  public goToNextQuestion() {
-    this.replyList.push(this.answer);
+  public async answerQuestion() {
+    await this.planService.answerQuestion(this.questionIndex, this.answer);
     this.answer = "";
     this.questionIndex++;
     if (this.questionIndex == this.questionList.length - 1) {

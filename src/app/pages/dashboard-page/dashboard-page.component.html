@@ -3,8 +3,8 @@
     <div *ngFor="let question of questionList; let i = index">
       <div *ngIf="questionIndex === i">
         <div class="question-title">
-          <h1>{{question}}</h1>
-          <h1>{{i+1}} / {{questionList.length}}</h1>
+          <h1>{{question.description}}</h1>
+          <h1 style="width: 100px;">{{questionIndex + 1}} / {{questionList.length}}</h1>
         </div>
         <!--      <div class="mx-4">-->
         <!--        <h2>{{question}}</h2>-->
@@ -23,7 +23,7 @@
       <button
         class="btn btn-outline-success my-3"
         type="submit"
-        (click)="goToNextQuestion()">{{answerButtonTitle}}</button>
+        (click)="answerQuestion()">{{answerButtonTitle}}</button>
     </div>
   </div>
   <div class="d-flex justify-content-center align-items-center my-5">
