@@ -38,6 +38,7 @@ export class UserService {
       }
     ).catch(
       a => {
+        console.log(a);
         this.loggedIn = false;
       }
     )
