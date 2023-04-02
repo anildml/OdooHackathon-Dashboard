@@ -15,7 +15,7 @@ export class DashboardPageComponent implements OnInit {
   doesUserHaveQuestions: boolean = false;
 
   questionList: any[] = [];
-  questionIndex = 1;
+  questionIndex = 0;
   questionsFinished: boolean = false;
 
   replyList: string[] = [];
