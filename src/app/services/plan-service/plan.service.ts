@@ -35,6 +35,24 @@ export class PlanService {
     return data;
   }
 
+  public async answerQuestion(id: number, reply: string): Promise<any> {
+    let data;
+    let body: any = {
+      description: reply
+    }
+    let url = environment.service_url + "/api/question/" + id + "/reply";
+    await firstValueFrom(this.http.post(url, body)).then(
+      (a: any) => {
+        data = a;
+      }
+    ).catch(
+      (a: any) => {
+        console.log(a);
+      }
+    );
+    return data;
+  }
+
   public doesUserHaveQuestionsToAnswer(): boolean {
     return this.userHaveQuestionsToAnswer;
   }
