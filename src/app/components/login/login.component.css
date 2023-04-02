@@ -1,0 +1,113 @@
+.whole_page {
+    background-color:#FDF1EC;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.center_pannel{
+    background-color: white;
+    width:33%;
+    height: 90%;
+    position: absolute;
+    top:8%;
+    left:33%;
+    /* font-family: Helvetica, sans-serif; */
+    border-radius: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+
+}
+#message{
+    color:#7c3421;
+    position: relative;
+    left:32%;
+    top:10%;
+    font-family: 'lato';
+    font-weight: bolder;
+    font-size: 2pc;
+
+}
+#username,#password{
+    position: relative;
+    left:40%;
+    color:white;
+
+}
+.username_div,.password_div{
+    background-color: white;
+    position: relative;
+    width: 90%;
+    left: 5%;
+    top: 25%;  
+    /* border-radius: 50% 10% 50% 20%;  */
+}
+.password_div{
+
+    top:30%;
+    /* border-radius: 50% 10% 50% 20%;  */
+}
+
+#textarea_username,#textarea_password{
+    border: none;
+    outline: none;
+    resize: none;
+    left:10%;
+    width: 80%;
+    height:30px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+
+}
+
+#textarea_password{
+
+    -webkit-text-security: disc;
+    -moz-text-security: disc;
+    text-security: disc;
+}
+
+#textarea_username:focus::placeholder,#textarea_password:focus::placeholder {
+    opacity: 0;
+  }
+#textarea_username:focus,#textarea_password:focus{
+    border-bottom: 3px solid #7c3421;
+  }
+#textarea_username::selection{
+    font-size: 30px;
+}
+
+ #textarea_username::placeholder {
+    font-size:20px;
+  } 
+.send_button{
+    border-radius: 50px;
+    position: absolute;
+    bottom :20%;
+    left:10%;
+    font-family: 'lato';
+    background-color: #7c3421;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+    height: 60px;
+    line-height: 60px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.alert{
+    position: absolute;
+    bottom:30%;
+    left:8%;
+    color:red;
+}
+
+
+  
+  
